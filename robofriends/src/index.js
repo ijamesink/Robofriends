@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider, createStoreHook } from 'react-redux';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'tachyons';
 import App from './Container/App';
+import { searchRobots } from './reducers';
+
+const store = createStoreHook(searchRobots)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
